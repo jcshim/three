@@ -1,2 +1,4 @@
 # three
-three.js
+## three.js 를 학습 합니다.
+
+
