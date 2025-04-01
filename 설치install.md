@@ -11,22 +11,18 @@ Three.js 프로젝트에는 최소 아래 파일들이 필요해요:
 - `main.js`: Three.js 코드 작성
 - `public/`: 이미지, 사운드, 3D 모델 등 정적 파일 저장
 
-```html
-<!-- index.html 예시 -->
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>My first three.js app</title>
-    <style> body { margin: 0; } </style>
-    <!-- CDN 방식 사용할 경우 여기에 import map이 들어감 -->
-  </head>
-  <body>
-    <script type="module" src="/main.js"></script>
-  </body>
-</html>
+```index.html
+<script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.module.js"
+      }
+    }
+</script>
+<script type="module" src="./main.js"></script>
 ```
 
-```js
+```main.js
 import * as THREE from 'three';
 
 const scene = new THREE.Scene();
